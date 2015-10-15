@@ -1,0 +1,26 @@
+// иконки
+@mixin bgi($image){
+  width: image-width($image);
+  height: image-height($image);
+  background-image: inline-image($image);
+  background-repeat: no-repeat;
+}
+@mixin bgp($image){
+  width: image-width($image);
+  height: image-height($image);
+  background-image: image-url($image);
+  background-repeat: no-repeat;
+}
+.inline-block{
+  display: -moz-inline-stack; // ff2
+  display: inline-block;
+  zoom: 1; // Internet Explorer 6
+  *display: inline; // Internet Explorer
+}
+.i-invisible {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  visibility: hidden;
+}
+

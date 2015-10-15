@@ -1,0 +1,509 @@
+.icon {
+    font-size: 10px;
+}
+
+.icon:before {
+    content:' ';
+    vertical-align:middle;
+    display: inline-block;
+    background-image: url("../svg/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 16.3em 293.9em;
+}
+
+.no-svg .icon:before {
+    background-image: url("../svg/sprite.png");
+}
+
+.icon.icon-2-piple_red:before {
+    background-position: -0.1em -0.1em;
+    width: 2.83em;
+    height: 2em;
+}
+
+.icon.icon-arrow-down:before {
+    background-position: -0.1em -2.3000000000000003em;
+    width: 1.3em;
+    height: 3em;
+}
+
+.icon.icon-arrow-down_red:before {
+    background-position: -0.1em -5.5em;
+    width: 1.3em;
+    height: 3em;
+}
+
+.icon.icon-arrow-to-left:before {
+    background-position: -0.1em -8.7em;
+    width: 3em;
+    height: 1.3em;
+}
+
+.icon.icon-arrow-to-right:before {
+    background-position: -0.1em -10.2em;
+    width: 3em;
+    height: 1.3em;
+}
+
+.icon.icon-arrow_white_left:before {
+    background-position: -0.1em -11.7em;
+    width: 3em;
+    height: 1.9em;
+}
+
+.icon.icon-arrow_white_right:before {
+    background-position: -0.1em -13.799999999999999em;
+    width: 3em;
+    height: 1.9em;
+}
+
+.icon.icon-british:before {
+    background-position: -0.1em -15.9em;
+    width: 3.8299999999999996em;
+    height: 3.4200000000000004em;
+}
+
+.icon.icon-chair:before {
+    background-position: -0.1em -19.6em;
+    width: 4.5em;
+    height: 4em;
+}
+
+.icon.icon-chart:before {
+    background-position: -0.1em -23.8em;
+    width: 2.1em;
+    height: 2.1em;
+}
+
+.icon.icon-chart_ping-red:before {
+    background-position: -0.1em -26.1em;
+    width: 2.1em;
+    height: 2.1em;
+}
+
+.icon.icon-close_white:before {
+    background-position: -0.1em -28.400000000000002em;
+    width: 2em;
+    height: 2em;
+}
+
+.icon.icon-cloud-mc-cloud:before {
+    background-position: -0.1em -30.6em;
+    width: 5.5em;
+    height: 3em;
+}
+
+.icon.icon-cogwheel:before {
+    background-position: -0.1em -33.800000000000004em;
+    width: 2em;
+    height: 2em;
+}
+
+.icon.icon-comment-vs-love:before {
+    background-position: -0.1em -36em;
+    width: 2.1em;
+    height: 2em;
+}
+
+.icon.icon-cook:before {
+    background-position: -0.1em -38.2em;
+    width: 4.2em;
+    height: 3.8em;
+}
+
+.icon.icon-cube:before {
+    background-position: -0.1em -42.2em;
+    width: 5em;
+    height: 4.5em;
+}
+
+.icon.icon-droid-booster-setting:before {
+    background-position: -0.1em -46.9em;
+    width: 2em;
+    height: 2em;
+}
+
+.icon.icon-dumbbell:before {
+    background-position: -0.1em -49.1em;
+    width: 4.9em;
+    height: 3.2em;
+}
+
+.icon.icon-facebook:before {
+    background-position: -0.1em -52.5em;
+    width: 0.7em;
+    height: 1.5em;
+}
+
+.icon.icon-facebook_dark:before {
+    background-position: -0.1em -54.2em;
+    width: 0.7em;
+    height: 1.5em;
+}
+
+.icon.icon-file:before {
+    background-position: -0.1em -55.9em;
+    width: 4em;
+    height: 5em;
+}
+
+.icon.icon-file_error:before {
+    background-position: -0.1em -61.1em;
+    width: 4em;
+    height: 5em;
+}
+
+.icon.icon-file_success:before {
+    background-position: -0.1em -66.3em;
+    width: 4em;
+    height: 5em;
+}
+
+.icon.icon-highly-recommended-apps:before {
+    background-position: -0.1em -71.5em;
+    width: 4.8em;
+    height: 4.2em;
+}
+
+.icon.icon-home:before {
+    background-position: -0.1em -75.89999999999999em;
+    width: 4.7em;
+    height: 4em;
+}
+
+.icon.icon-in:before {
+    background-position: -0.1em -80.1em;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.icon.icon-in_dark:before {
+    background-position: -0.1em -81.8em;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.icon.icon-instagram_dark:before {
+    background-position: -0.1em -83.5em;
+    width: 1.3987em;
+    height: 1.3987em;
+}
+
+.icon.icon-instagram_white:before {
+    background-position: -0.1em -85.1em;
+    width: 1.4em;
+    height: 1.4em;
+}
+
+.icon.icon-light-bulb:before {
+    background-position: -0.1em -86.69999999999999em;
+    width: 1.5em;
+    height: 2em;
+}
+
+.icon.icon-location_red:before {
+    background-position: -0.1em -88.89999999999999em;
+    width: 4em;
+    height: 4.7em;
+}
+
+.icon.icon-logo:before {
+    background-position: -0.1em -93.8em;
+    width: 7em;
+    height: 7.1em;
+}
+
+.icon.icon-logo_header:before {
+    background-position: -0.1em -101.1em;
+    width: 16.1em;
+    height: 4.8em;
+}
+
+.icon.icon-logo_header_line:before {
+    background-position: -0.1em -106.1em;
+    width: 16.1em;
+    height: 4.8em;
+}
+
+.icon.icon-logo_transparent:before {
+    background-position: -0.1em -111.1em;
+    width: 8em;
+    height: 8em;
+}
+
+.icon.icon-looxy:before {
+    background-position: -0.1em -119.3em;
+    width: 4em;
+    height: 4.2em;
+}
+
+.icon.icon-mackeeper:before {
+    background-position: -0.1em -123.69999999999999em;
+    width: 4em;
+    height: 4em;
+}
+
+.icon.icon-mail:before {
+    background-position: -0.1em -127.89999999999999em;
+    width: 2em;
+    height: 1.8em;
+}
+
+.icon.icon-man-and-diagram:before {
+    background-position: -0.1em -129.9em;
+    width: 5em;
+    height: 3.6em;
+}
+
+.icon.icon-man-and-plus:before {
+    background-position: -0.1em -133.7em;
+    width: 4.2em;
+    height: 3.3em;
+}
+
+.icon.icon-mega:before {
+    background-position: -0.1em -137.2em;
+    width: 2.6em;
+    height: 2em;
+}
+
+.icon.icon-mega-backup:before {
+    background-position: -0.1em -139.4em;
+    width: 4.2em;
+    height: 3.1em;
+}
+
+.icon.icon-mirror:before {
+    background-position: -0.1em -142.7em;
+    width: 3.8em;
+    height: 4em;
+}
+
+.icon.icon-news:before {
+    background-position: -0.1em -146.9em;
+    width: 4.5em;
+    height: 3.6em;
+}
+
+.icon.icon-nu:before {
+    background-position: -0.1em -150.7em;
+    width: 2.8em;
+    height: 3em;
+}
+
+.icon.icon-nu_yellow:before {
+    background-position: -0.1em -153.9em;
+    width: 2.8em;
+    height: 3em;
+}
+
+.icon.icon-pckeeper:before {
+    background-position: -0.1em -157.1em;
+    width: 3.38em;
+    height: 3.8em;
+}
+
+.icon.icon-phone:before {
+    background-position: -0.1em -161.1em;
+    width: 3.3em;
+    height: 4.2em;
+}
+
+.icon.icon-point:before {
+    background-position: -0.1em -165.5em;
+    width: 4.7em;
+    height: 7.9em;
+}
+
+.icon.icon-popup-book_white:before {
+    background-position: -0.1em -173.6em;
+    width: 4em;
+    height: 3.6em;
+}
+
+.icon.icon-popup-chat_white:before {
+    background-position: -0.1em -177.4em;
+    width: 4.2em;
+    height: 4em;
+}
+
+.icon.icon-popup-cogwheel_white:before {
+    background-position: -0.1em -181.6em;
+    width: 4.2em;
+    height: 4.2em;
+}
+
+.icon.icon-popup-heand_white:before {
+    background-position: -0.1em -186em;
+    width: 3.3em;
+    height: 4.8em;
+}
+
+.icon.icon-popup-heart_white:before {
+    background-position: -0.1em -191em;
+    width: 4.4em;
+    height: 3.8em;
+}
+
+.icon.icon-popup-light-bulb_white:before {
+    background-position: -0.1em -195em;
+    width: 3.1em;
+    height: 4.4em;
+}
+
+.icon.icon-purse:before {
+    background-position: -0.1em -199.6em;
+    width: 1.8em;
+    height: 1.8em;
+}
+
+.icon.icon-quote:before {
+    background-position: -0.1em -201.6em;
+    width: 1.6em;
+    height: 1.4em;
+}
+
+.icon.icon-red-plus:before {
+    background-position: -0.1em -203.2em;
+    width: 3em;
+    height: 3em;
+}
+
+.icon.icon-rss:before {
+    background-position: -0.1em -206.4em;
+    width: 3.6006em;
+    height: 5.0016em;
+}
+
+.icon.icon-scheme:before {
+    background-position: -0.1em -211.7em;
+    width: 2em;
+    height: 2em;
+}
+
+.icon.icon-shiny:before {
+    background-position: -0.1em -213.9em;
+    width: 5.9em;
+    height: 3.6em;
+}
+
+.icon.icon-skype:before {
+    background-position: -0.1em -217.7em;
+    width: 2em;
+    height: 2em;
+}
+
+.icon.icon-super-zeo:before {
+    background-position: -0.1em -219.9em;
+    width: 5.5em;
+    height: 4em;
+}
+
+.icon.icon-three-book:before {
+    background-position: -0.1em -224.1em;
+    width: 4em;
+    height: 3.6em;
+}
+
+.icon.icon-three-chat:before {
+    background-position: -0.1em -227.9em;
+    width: 4.2em;
+    height: 4em;
+}
+
+.icon.icon-three-cogwheel:before {
+    background-position: -0.1em -232.1em;
+    width: 4.2em;
+    height: 4.2em;
+}
+
+.icon.icon-three-heand:before {
+    background-position: -0.1em -236.5em;
+    width: 3.3em;
+    height: 4.8em;
+}
+
+.icon.icon-three-heart:before {
+    background-position: -0.1em -241.5em;
+    width: 4.4em;
+    height: 3.8em;
+}
+
+.icon.icon-three-light-bulb:before {
+    background-position: -0.1em -245.5em;
+    width: 3.1em;
+    height: 4.4em;
+}
+
+.icon.icon-three-zeo:before {
+    background-position: -0.1em -250.1em;
+    width: 1.9em;
+    height: 2.8em;
+}
+
+.icon.icon-zeo:before {
+    background-position: -0.1em -253.1em;
+    width: 3em;
+    height: 2em;
+}
+
+.icon.icon-zeo-cogwheel:before {
+    background-position: -0.1em -255.29999999999998em;
+    width: 4.4em;
+    height: 4.4em;
+}
+
+.icon.icon-zeo-insight:before {
+    background-position: -0.1em -259.90000000000003em;
+    width: 4.2em;
+    height: 3.8em;
+}
+
+.icon.icon-zeo-kozak:before {
+    background-position: -0.1em -263.90000000000003em;
+    width: 3.6993em;
+    height: 7.5003em;
+}
+
+.icon.icon-zeo-pizza:before {
+    background-position: -0.1em -271.70000000000005em;
+    width: 2.3em;
+    height: 2em;
+}
+
+.icon.icon-zeo-space:before {
+    background-position: -0.1em -273.90000000000003em;
+    width: 4em;
+    height: 4em;
+}
+
+.icon.icon-zeo-university:before {
+    background-position: -0.1em -278.1em;
+    width: 3.2em;
+    height: 3.6em;
+}
+
+.icon.icon-zeo-university_old:before {
+    background-position: -0.1em -281.90000000000003em;
+    width: 3.2em;
+    height: 4em;
+}
+
+.icon.icon-zeo_red:before {
+    background-position: -0.1em -286.1em;
+    width: 3em;
+    height: 2em;
+}
+
+.icon.icon-zeoalliance:before {
+    background-position: -0.1em -288.3em;
+    width: 3em;
+    height: 2em;
+}
+
+.icon.icon-zoom-support:before {
+    background-position: -0.1em -290.5em;
+    width: 4.1em;
+    height: 3.3em;
+}
+

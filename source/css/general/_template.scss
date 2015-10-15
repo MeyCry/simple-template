@@ -1,0 +1,61 @@
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+html,
+body,
+.zeo-main-wrap {
+    min-width: $minWidth;
+//    min-height: 100%;
+}
+
+
+body {
+    font: $basefont $regular;
+    color: $textColor;
+    background-color: $white;
+    line-height: 1.6;
+    position: relative;
+    word-wrap: break-word; // перенос длинных слов
+    @include select-color();
+}
+
+.container {
+    height: auto;
+    min-height: 100%;
+}
+
+.main {
+    @extend .clearfix;
+    padding-bottom: $footerHeight;
+    position: relative;
+    overflow: hidden;
+}
+
+.foot {
+    background-color: $white;
+    position: relative;
+    margin-top: $footerHeight * -1;
+    height: $footerHeight;
+    clear: both;
+    padding: 100px 0 0;
+
+    &__inner {
+        @extend .i-container;
+    }
+}
+
+
+
+.head {
+
+    &__inner{
+
+    }
+}
+
+svg{ // i really don't have idea bout this bot i think this need =) TODO: investigation
+    display: block;
+}

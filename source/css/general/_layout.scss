@@ -1,0 +1,14 @@
+.l-right{
+	float: right;
+}
+.l-left{
+	float: left;
+}
+
+// для двух колонок
+.l-lefthalf{
+	@include l-left(50%);
+}
+.l-righthalf{
+	@include l-right(50%);
+}

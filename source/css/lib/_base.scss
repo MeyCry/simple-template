@@ -1,0 +1,74 @@
+// основные размеры текста
+$smallfont: 11px;
+$basefont: 12px;
+$middlefont: 14px;
+$bigfont: 18px;
+
+$baseline: $basefont * 1.6; // золотое сечение, ептить
+$gutterWidth: 20px; // стандартное расстояние в мультиколонках
+$regular: Tahoma, Arial, sans-serif;
+$selected: Georgia, Times, serif;
+$italic: Arial, sans-serif;
+$bold: Tahoma, Arial, sans-serif;
+
+$titleFamily: $selected; // заголовки
+
+// повышаем читабельность основных цветов
+$white: #fff;
+$black: #000;
+$lightGray: #aab0be;
+$gray: #e5e5e5;
+$grayDarken: #f7f7f7;
+$grayDarkenAndDarken: #d6d6d6;
+$grayMuchDarken: #b9b9b9;
+$darkGray: #313131;
+$darkenGray: #333333;
+$darkLightGray: #484848;
+//$red: #ff4500;
+$red: #ff5722;
+$darkRed: #eb0023;
+$darkenRed: #d72438;
+//$pink: #f1585e;
+$pink: #e91e63;
+$violet: #9c27b0;
+$blue: #00bcd4;
+$darkBlue: #2196f3;
+$blueMk: #18DEE5;
+$green: #00ff33;
+$darkGreen: #00af07;
+$darkenGreen: #4caf50;
+$lightGreen: #cbdc57;
+$yellow: #ffb400;
+$orange: #ff9900;
+$orangeDark: #f44336;
+
+$brown: #333;
+
+// цвет текста
+$textColor: $brown;
+$placeholderColor: lighten($black, 30);
+
+// задаем цвет ссылок
+$linkColor: $textColor;
+$linkColorHover: $red;
+$linkColorActive: darken($red, 20%);
+$linkColorVisited: $textColor;
+
+// цвет фона выделения текста на странице
+$selectionColor: #b4d5fe;
+
+// ширина
+$fixedWidth: 320px;
+$maxWidth: 1300px;
+$minWidth: $fixedWidth;
+
+$containerPadding: 10px;
+
+// высота подвала
+$footerHeight: 200px;
+
+// настройки форм
+$form-bgc: $white;
+$form-bdc: $gray;
+$form-c: #444;
+$form-focus: #ee5f5b;

@@ -1,0 +1,207 @@
+// стили заголовков
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 800;
+    line-height: 1;
+    font-family: $titleFamily;
+    text-transform: uppercase;
+
+    small {
+        font-size: 37.5%;
+        font-weight: 600;
+    }
+}
+
+h1 {
+    margin: 0;
+    font-size: 80px;
+
+}
+
+h2 {
+    font-size: 56px;
+    margin: 0;
+    @media screen and (max-width: 540px) {
+        font-size: 30px;
+    }
+}
+
+h3 {
+    font-size: 32px;
+    margin: 0;
+
+    @media screen and (max-width: 540px) {
+        font-size: 22px;
+    }
+}
+
+h4 {
+    font-size: $bigfont;
+    margin: 0;
+}
+
+h5 {
+    font-size: 14px;
+    margin: 0;
+
+}
+
+h6 {
+    font-size: 13px;
+    margin: 0;
+    font-weight: normal;
+    text-transform: none;
+
+}
+
+// стили ссылок
+a {
+    @include href();
+}
+
+a:hover,
+a:active {
+    outline: 0;
+}
+
+a:focus {
+    outline: none;
+}
+
+// хак улучшающий рендер изображений
+img {
+//    max-width: 100%;
+    height: auto;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+
+i, em {
+    font-style: italic;
+    font-weight: inherit;
+}
+
+b, strong {
+    font-style: inherit;
+    font-weight: bold;
+}
+
+big {
+    font-size: 120%;
+}
+
+small {
+    font-size: 85%;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -5px;
+}
+
+sub {
+    bottom: -25px;
+}
+
+// обнуление в навигациях
+nav ul,
+nav ol {
+    list-style: none;
+    list-style-image: none;
+}
+
+// таблицы
+th {
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+td {
+    vertical-align: top;
+}
+
+// для отладки
+pre {
+    background-color: lighten($gray, 75);
+    display: block;
+    padding: 7px;
+    margin: 0 0 $baseline;
+    line-height: 1.4;
+    font-family: Lucida Console, Courier New, Courier, monospaced;
+    font-size: $basefont - 1;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, .15);
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    @include border-radius(4px);
+
+    code {
+        padding: 0;
+        color: inherit;
+        background-color: transparent;
+        border: 0;
+    }
+}
+
+// контентная типографика
+article {
+    p {
+        margin: 4px 0 8px;
+    }
+
+    ul,
+    ol {
+        padding: 0;
+        margin: 0 0 10px 25px;
+    }
+    ul ul,
+    ul ol,
+    ol ol,
+    ol ul {
+        margin-bottom: 0;
+    }
+    ul {
+        list-style: disc;
+    }
+    ol {
+        list-style: decimal;
+    }
+    li {
+        line-height: $baseline;
+    }
+
+    hr {
+        margin: $baseline 0;
+        border: 0;
+        border-top: 1px solid darken($gray, 20);
+        border-bottom: 1px solid lighten($gray, 20);
+    }
+
+    tr {
+        &.odd {
+            td {
+                background-color: lighten($black, 92);
+
+                &:hover {
+                    background-color: $white;
+                }
+            }
+        }
+        &.even {
+            td {
+                background-color: lighten($black, 96);
+
+                &:hover {
+                    background-color: $white;
+                }
+            }
+        }
+    }
+}

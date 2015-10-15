@@ -1,0 +1,357 @@
+// всякие прикольные миксины для разметки
+@mixin l-left($w: auto){
+    float: left;
+    width: $w;
+}
+
+@mixin l-right($w: auto){
+    float: right;
+    width: $w;
+}
+
+@mixin centered($w: auto){
+    display: block;
+    width: $w;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// удобный миксин для задания размера, особенно для изначально инлайновых элементов типа ссылок
+@mixin size($height: auto, $width: auto){
+    display: block;
+    height: $height;
+    width: $width;
+}
+@mixin square($long: auto){
+    @include size($long, $long);
+}
+
+// очистка потока
+.clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+// миксин для ссылок, удобно использовать для переопределений
+@mixin href($color: $linkColor, $colorHover: $linkColorHover, $colorActive: $linkColorActive, $colorVisited: $linkColorVisited){
+    &:visited{
+        color: $colorVisited;
+    }
+    &:link{
+        color: $color;
+    }
+    &:hover{
+        color: $colorHover;
+    }
+    &:active{
+        color: $colorActive;
+    }
+}
+
+// для псевдоссылок
+@mixin pseudo($color: $linkColor, $colorHover: $linkColorHover, $colorActive: $linkColorActive, $type: dashed){
+    @include href($color, $colorHover, $colorActive, $color);
+    text-decoration: none;
+    cursor: pointer;
+    border-bottom: 1px $type $color;
+
+    &:hover{
+        text-decoration: none;
+        border-color: $colorHover;
+    }
+    &:active{
+        border-color: $colorActive;
+    }
+}
+
+// часто бывает, что ссылка больше чем текст
+@mixin pseudo-span($color: $linkColor, $colorHover: $linkColorHover, $colorActive: $linkColorActive, $type: dashed){
+    text-decoration: none;
+    cursor: pointer;
+    @include href($color, $colorHover, $colorActive, $color);
+
+    span{
+        border-bottom: 1px $type $color;
+    }
+
+    &:hover{
+        span{
+            text-decoration: none;
+            border-color: $colorHover;
+        }
+    }
+    &:active{
+        span{
+            border-color: $colorActive;
+        }
+    }
+}
+
+// настройка цвета выделения
+@mixin select-color($color: $selectionColor) {
+      * {
+          &::-webkit-selection { background: $color; } // Safari и Chrome
+          &::-moz-selection { background: $color; } // Firefox
+          &::selection { background: $color; }
+
+          img {
+              &::-webkit-selection { background: transparent; } // Safari и Chrome
+              &::-moz-selection { background: transparent; } // Firefox
+              &::selection { background: transparent; }
+          }
+      }
+  }
+
+// цвет текста в плейсхолдере
+@mixin placeholder($color: $textColor){
+
+    &::-webkit-input-placeholder{
+        color: $color;
+    }
+    &:-moz-placeholder{
+        color: $color;
+    }
+    &.placeholder{ // jquery placeholder
+        color: $color;
+    }
+}
+
+// прозрачный фон
+@mixin rgba($hex, $alpha: .8) {
+    background: $hex;
+    background: hsla(hue($hex), saturation($hex), lightness($hex), $alpha);
+}
+
+// прозрачность
+// @include opacity(0.5);
+
+
+// прозрачный однотонный фон
+@mixin translucent($color: $white, $alpha: 0.85) {
+    background-color: hsla(hue($color), saturation($color), lightness($color), $alpha);
+}
+
+// тенюшка
+@mixin box-shadow($shadows...) {
+	-moz-box-shadow: $shadows;
+	-webkit-box-shadow: $shadows;
+	box-shadow: $shadows;
+}
+
+@mixin box-shadoww($x: 0, $y: 1px, $blur: 3px, $c: #ffffff, $a: .25) {
+    $shadow: $x $y $blur rgba(hue($c), saturation($c), lightness($c), $a);
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+// внутреняя тень
+@mixin box-shadow-inset($x: 0, $y: 0, $blur: 1px, $c: #ffffff) {
+    $shadow: inset $x $y $blur hsla(hue($c), saturation($c), lightness($c), 1);
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+// скругленные уголки
+@mixin border-radius($radius: 5px) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+          border-radius: $radius;
+}
+
+// долго объяснять
+@mixin box-sizing($how: border-box){
+    -webkit-box-sizing: $how;
+    -moz-box-sizing: $how;
+    box-sizing: $how;
+}
+
+// градиенты
+@mixin gradient-horizontal($startColor: $gray, $endColor: lighten($gray, 15)) {
+  background-color: $endColor;
+  background-image: -moz-linear-gradient(left, $startColor, $endColor); // FF 3.6+
+  background-image: -ms-linear-gradient(left, $startColor, $endColor); // IE10
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, from($startColor), to($endColor)); // Safari 4+, Chrome 2+
+  background-image: -webkit-linear-gradient(left, $startColor, $endColor); // Safari 5.1+, Chrome 10+
+  background-image: -o-linear-gradient(left, $startColor, $endColor); // Opera 11.10
+  background-image: linear-gradient(left, $startColor, $endColor); // native
+  background-repeat: repeat-x;
+}
+@mixin gradient-vertical($startColor: $gray, $endColor: lighten($gray, 15)) {
+    background-color: mix($startColor, $endColor, 60%);
+    background-image: -moz-linear-gradient(top, $startColor, $endColor); // FF 3.6+
+    background-image: -ms-linear-gradient(top, $startColor, $endColor); // IE10
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from($startColor), to($endColor)); // Safari 4+, Chrome 2+
+    background-image: -webkit-linear-gradient(top, $startColor, $endColor); // Safari 5.1+, Chrome 10+
+    background-image: -o-linear-gradient(top, $startColor, $endColor); // Opera 11.10
+    background-image: linear-gradient(top, $startColor, $endColor); // native
+    background-repeat: repeat-y;
+}
+
+// не забываем ИСПОЛЬЗОВАТЬ резет градиента, чтобы они в ИЕ не наследовались
+//.reset-filter() {
+//  filter: e(%("progid:DXImageTransform.Microsoft.gradient(enabled = false)"));
+//}
+
+
+// убираем баги горячо любимого
+.inline-block {
+  display: -moz-inline-stack; // ff2
+  display: inline-block;
+  zoom: 1; // Internet Explorer 6
+  *display: inline; // Internet Explorer
+}
+// миксин для удаления пробелов при строчных блоках
+@mixin ib($value: -4px){
+    letter-spacing: $value;
+    word-spacing: $value;
+}
+
+
+// добавляем плавности для :hover и :active событий, для более сложных транзишинов,
+// лучше написать отдельную функцию, но обычно они не юзаются
+@mixin transition($time: 0.5s, $type: linear) {
+	-moz-transition: all $time $type; // Firefox 4
+    -ms-transition: all $time $type; // Internet Explore 9
+    -o-transition: all $time $type; // Opera
+    -webkit-transition: all $time $type; // Safari and Chrome
+    transition: all $time $type;
+}
+
+// поворот блока в градусах
+@mixin transform($type:rotate, $rotate: 45deg) {
+    -webkit-transform: rotate($rotate);
+    -moz-transform: rotate($rotate);
+    -ms-transform: rotate($rotate);
+    -o-transform: rotate($rotate);
+    transform: rotate($rotate);
+}
+
+@mixin background-size($arg){
+	-webkit-background-size: $arg;
+	-moz-background-size: $arg;
+	background-size: $arg;
+}
+
+// animation
+
+//пример @include animation-pro(gogo, 0, 1s, 20, normal, forwards);
+
+@mixin animation-pro ($nameAnimation: gogogo, $delay: 0, $duration: 1s, $count: infinite, $direction: normal, $mode: forwards, $timingFunction: linear) {
+    -webkit-animation-name: $nameAnimation;             // имя анимации для keyframes (можно в "" можно и без, но с кавычками понимает только хром)
+    -webkit-animation-delay: $delay;                // задержка до анимации (5s)
+    -webkit-animation-duration: $duration;          // длительность анимации (5s)
+    -webkit-animation-timing-function: $timingFunction;      // передвижение анимации
+    -webkit-animation-iteration-count: $count;      // количество повторений анимации (1 или 2 ... ну или infinite)
+    -webkit-animation-direction: $direction;        // alternate -в прямом и обратном направлениях или normal в прямом
+    -webkit-animation-play-state: running;          // running и paused работает ли анимация или стоит на паузе
+    -webkit-animation-fill-mode: $mode;          // определяет, будет ли видимым эффект от анимации, когда сама анимация уже закончилась (можно указать несколько через запятую)
+    //ЗНАЧЕНИЯ:
+    // none — эффект от анимации будет наблюдаться лишь в течение времени анимации
+    // forwards — эффект от анимации будет виден даже тогда, когда анимация закончилась (после завершения анимации элемент получает не начальные значения, а какие-то промедуточные из анимации)
+    // backwards — начальный ключевой кадр анимации будет отображаться в течение всего времени задержки анимации (имеет смысл применять только к анимациям с ненулевой задержкой)
+    // both — начальный ключевой кадр анимации будет отображаться в течение всего времени задержки анимации, а последний будет отображаться даже тогда, когда анимация закончилась (имеет смысл применять только к анимациям с ненулевой задержкой).
+
+    -moz-animation-name: $nameAnimation;
+    -moz-animation-delay: $delay;
+    -moz-animation-duration: $duration;
+    -moz-animation-timing-function: $timingFunction;
+    -moz-animation-iteration-count: $count;
+    -moz-animation-direction: $direction;
+    -moz-animation-play-state: running;
+    -moz-animation-fill-mode: $mode; /* this prevents the animation from restarting! */
+
+    -o-animation-name: $nameAnimation;
+    -o-animation-delay: $delay;
+    -o-animation-duration: $duration;
+    -o-animation-timing-function: $timingFunction;
+    -o-animation-iteration-count: $count;
+    -o-animation-direction: $direction;
+    -o-animation-play-state: running;
+    -o-animation-fill-mode: $mode; /* this prevents the animation from restarting! */
+
+    animation-name: $nameAnimation;
+    animation-delay: $delay;
+    animation-duration: $duration;
+    animation-timing-function: $timingFunction;
+    animation-iteration-count: $count;
+    animation-direction: $direction;
+    animation-play-state: running;
+    animation-fill-mode: $mode; /* this prevents the animation from restarting! */
+}
+
+@mixin animations-sprite-pro ($nameAnimation: gogogo, $duration: .7s, $steps: 7, $count: infinite){
+    -webkit-animation: $nameAnimation $duration steps($steps) $count;
+    -moz-animation: $nameAnimation $duration steps($steps) $count;
+    -ms-animation: $nameAnimation $duration steps($steps) $count;
+    -o-animation: $nameAnimation $duration steps($steps) $count;
+    animation: $nameAnimation $duration steps($steps) $count;
+}
+
+@mixin keyframe ($nameAnimation: gogogo) {
+    @-webkit-keyframes #{$nameAnimation} {
+        @content;
+    }
+
+    @-moz-keyframes #{$nameAnimation} {
+        @content;
+    }
+
+    @-o-keyframes #{$nameAnimation} {
+        @content;
+    }
+
+    @keyframes #{$nameAnimation} {
+        @content;
+    }
+}
+
+@mixin media($width){ // media screens
+    @media screen and (max-width: #{$width}px) {
+        @content;
+    }
+}
+
+@mixin background-opacity($colorBg, $opacityBg: 0.3) {
+    background: $colorBg; /* The Fallback */
+    background: rgba($colorBg, $opacityBg);
+}
+
+@mixin color-opacity($color, $opacity: 0.3) {
+    color: rgba($color, $opacity);
+}
+
+@mixin pseudo-span-shit(
+    $color: $linkColor,
+    $colorHover: $linkColorHover,
+    $colorActive: $linkColorActive,
+    $type: solid){
+
+    text-decoration: none;
+    cursor: pointer;
+    @include href($color, $colorHover, $colorActive, $color);
+
+    span{
+        border-bottom: 1px $type $color;
+    }
+
+    &:hover{
+        span{
+            text-decoration: none;
+            border-color: $colorHover;
+        }
+    }
+    &:active{
+        span{
+            border-color: $colorActive;
+        }
+    }
+}

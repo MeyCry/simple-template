@@ -1,0 +1,25 @@
+@import "sprites-config";
+
+
+// стандартная функция
+// +icons-sprite(name)
+
+// функция, подключающая inline-block
+// +ib-icons(name)
+
+// функция, которая не дублирует размер
+// +only-icons(name)
+
+
+//.icon-circuits
+//    +ib-icons(icon-circuits)
+
+//.icon-arrow-down-big{
+//    @include ib-icons(icon-arrow-down);
+//}
+//.icon-arrow-right{
+//    @include ib-icons(icon-arrow-right);
+//}
+//.icon-logo{
+//    @include ib-icons(icon-logo);
+//}

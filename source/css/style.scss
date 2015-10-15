@@ -1,0 +1,26 @@
+
+// basic blocks
+@import "lib/base";             // переменные и функции самого проекта
+@import "lib/mixins";           // общие функции
+@import "lib/reset";            // обнуляем + приводим по максимуму к единому виду
+
+@import "scss-image/sprites"; // Подключаем если пользуемся scss спрайтами
+@import "scss-image/icons"; // Подключаем если пользуемся scss картинки в base64
+
+//@import "../image/svg/sprite/css/sprite";
+
+@import "general/typo";             // глобальные стили, типографика, reset 2.0
+@import "general/layout";           // стили разметки
+@import "lib/includes";         // i-стили те что можно добавить к любому елементу
+@import "general/forms";            // формы, кнопки
+@import "basic/atoms";            // прочие атом-блоки
+@import "general/template";         // стили шаблона
+@import "basic/content";          // стили разных страниц все что не понятно куда писать, писать сюда
+
+// blocks
+
+
+@media print {
+    @import "basic/print"; // стили для печати
+}
+

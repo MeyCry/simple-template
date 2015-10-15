@@ -1,0 +1,23 @@
+$icons-spacing: 1px; // добавляем 1 пиксель между иконками, для устранения бага при зуме
+$icons-sprite-dimensions: true; // включаем параметры height и width для иконок
+$icons-layout: vertical; // включаем умный лейаут
+@import "sprites/icons/*.png";
+
+
+.inline-block{
+  display: -moz-inline-stack; // ff2
+  display: inline-block;
+  zoom: 1; // Internet Explorer 6
+  *display: inline; // Internet Explorer
+}
+
+@mixin ib-icons($name) {
+  @include icons-sprite($name);
+  @extend .inline-block;
+}
+
+@mixin only-icons($name){
+  $icons-sprite-dimensions: false;
+  @include icons-sprite($name);
+  $icons-sprite-dimensions: true;
+}
